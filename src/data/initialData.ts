@@ -219,135 +219,47 @@ export const initialEvents: EventItem[] = [
 export const initialGallery: GalleryPhoto[] = [
   {
     id: 'gal-1',
-    title: 'Maa Durga in Traditional Daker Saaj',
+    title: 'Maa Durga & Mahishasuramardini - Sacred Pratima Darshan',
     category: 'Durga Puja 2026',
     year: 2026,
     eventDate: 'October 2026',
-    imageUrl: '/images/durga-hero.jpg',
-    caption: 'The divine deity Maa Durga resplendent in golden ornaments and vermillion saree with Mahishasuramardini iconography.',
-    tags: ['Maa Durga', 'Daker Saaj', 'Mandap', 'Puja 2026'],
+    imageUrl: '/images/durga-idol-darshan-actual.jpg',
+    caption: 'Divine close-up darshan of Maa Durga riding her sacred lion and slaying the asura, adorned in golden mukut, traditional ornamentation, and fresh yellow marigold garland.',
+    tags: ['Maa Durga', 'Mahishasuramardini', 'Pratima Darshan', 'Durga Puja 2026'],
     isCover: true
   },
   {
     id: 'gal-2',
-    title: 'Maa Durga Divine Portrait (Vertical View)',
+    title: 'Grand Sarbojanin Durga Puja Pandal & All Deities',
     category: 'Durga Puja 2026',
     year: 2026,
     eventDate: 'October 2026',
-    imageUrl: '/images/durga-idol-vertical.jpg',
-    caption: 'Full-length vertical darshan of Maa Durga Pratima adorned in sacred jewellery and traditional Daaker Saaj.',
-    tags: ['Durga Pratima', 'Vertical', 'Daaker Saaj'],
+    imageUrl: '/images/durga-pandal-full-actual.jpg',
+    caption: 'Full panoramic view of the holy mandap stage featuring Maa Durga, Devi Lakshmi, Devi Saraswati, Lord Ganesha, and Lord Kartikeya under ornate festive arches.',
+    tags: ['Full Mandap', 'All Deities', 'Durga Pratima', 'Stage View', 'Puja 2026'],
     isCover: true
   },
   {
     id: 'gal-3',
-    title: 'Official 20th Durga Puja 2026 Timetable Poster',
+    title: 'Festive Mandap Atmosphere & Devotees Darshan at Anand Wadi',
     category: 'Durga Puja 2026',
     year: 2026,
     eventDate: 'October 2026',
-    imageUrl: '/images/puja-timetable-poster-2026.jpg',
-    caption: 'Authentic ceremonial timetable poster released by Netaji Subhas Chandra Welfare Sangha for 2026 festivities.',
-    tags: ['Poster', 'Timetable', 'Puja 2026', 'Official'],
-    isCover: false
+    imageUrl: '/images/durga-mandap-stage-actual.jpg',
+    caption: 'Atmospheric view from the devotee hall capturing sacred banana leaf offerings, glowing brass lamps, dhoop incense, and devotees gathered in prayer.',
+    tags: ['Devotees Darshan', 'Pushpanjali', 'Anand Wadi', 'Festive Ambiance', 'Puja 2026'],
+    isCover: true
   },
   {
     id: 'gal-4',
-    title: 'Maha Dashami Sindhur Khela Celebrations',
-    category: 'Sindhur Khela',
-    year: 2025,
-    eventDate: 'Maha Dashami',
-    imageUrl: '/images/sindhur-khela.jpg',
-    caption: 'Devotees and women of the Sangha participating in the joyous traditional Sindhur Khela ritual on Dashami evening.',
-    tags: ['Sindhur Khela', 'Maha Dashami', 'Tradition', 'Joy'],
-    isCover: true
-  },
-  {
-    id: 'gal-5',
-    title: 'Kojagari Lakshmi Puja Divine Altar',
-    category: 'Lakshmi Puja',
-    year: 2025,
-    eventDate: 'Kojagari Purnima',
-    imageUrl: '/images/lakshmi-puja.jpg',
-    caption: 'Sacred Lakshmi Puja altar adorned with rice paste alpona footprints, fresh lotus blossoms, and traditional terracotta oil lamps.',
-    tags: ['Lakshmi Puja', 'Alpona', 'Lotus', 'Kojagari'],
-    isCover: true
-  },
-  {
-    id: 'gal-6',
-    title: 'Traditional Bengali Alpona & Folk Motifs',
-    category: 'Cultural Programs',
-    year: 2026,
-    eventDate: 'Festive Season',
-    imageUrl: '/images/bengali-alpona-art.jpg',
-    caption: 'Intricate sacred rice-paste Alpona floor mandala patterns hand-painted by community artists in Anand Wadi.',
-    tags: ['Alpona', 'Folk Art', 'Heritage', 'Mandala'],
-    isCover: false
-  },
-  {
-    id: 'gal-7',
-    title: 'Maha Pratima Close-up Darshan',
+    title: 'Traditional Daaker Saaj & Sholar Kaaj Durga Pratima',
     category: 'Durga Puja 2026',
     year: 2026,
     eventDate: 'October 2026',
-    imageUrl: '/images/durga-idol-hero.jpg',
-    caption: 'Serene facial expression and compassionate eyes of Maa Durga blessing all visiting devotees.',
-    tags: ['Maa Durga', 'Darshan', 'Pratima', 'Bhakti'],
-    isCover: false
-  },
-  {
-    id: 'gal-8',
-    title: 'Maha Bhandara Community Feast Distribution',
-    category: 'Community Activities',
-    year: 2025,
-    eventDate: 'Maha Navami',
-    imageUrl: '/images/community-bhog.jpg',
-    caption: 'Sangha members and local families enjoying the traditional Khichuri Prasad and bhog in the community dining area.',
-    tags: ['Bhog', 'Community', 'Maha Bhandara', 'Prasad'],
+    imageUrl: '/images/traditional-daaker-saaj-pratima.jpg',
+    caption: 'Exquisite traditional Daaker Saaj and Sholar Kaaj ornamentation featuring Maa Durga, Lord Shiva chalchitra, green Mahishasura, white lion, and the Panchadevata family.',
+    tags: ['Daaker Saaj', 'Sholar Kaaj', 'Traditional Pratima', 'Durga Puja 2026', 'Heritage'],
     isCover: true
-  },
-  {
-    id: 'gal-9',
-    title: 'Heritage Mandap & Lighting Ambiance',
-    category: 'Durga Puja 2026',
-    year: 2025,
-    eventDate: 'Maha Saptami',
-    imageUrl: '/images/scenic-hero.jpg',
-    caption: 'Illuminated mandap entrance and decorative archways welcoming thousands of pilgrims in Kurar Village.',
-    tags: ['Mandap', 'Illumination', 'Night View'],
-    isCover: false
-  },
-  {
-    id: 'gal-10',
-    title: 'Sacred Bodhan & Kalparambha Rituals',
-    category: 'Maha Sasthi',
-    year: 2025,
-    eventDate: 'Maha Sasthi',
-    imageUrl: '/images/durga-pratima-about.jpg',
-    caption: 'Early morning Bodhan ceremony invoking the Mother Goddess with sacred mantras, conch shells, and dhak beats.',
-    tags: ['Maha Sasthi', 'Bodhan', 'Rituals'],
-    isCover: false
-  },
-  {
-    id: 'gal-11',
-    title: 'Maha Astami Sandhi Puja 108 Lamps',
-    category: 'Maha Astami',
-    year: 2025,
-    eventDate: 'Maha Astami',
-    imageUrl: '/images/durga-hero.jpg',
-    caption: 'The auspicious 24-minute confluence of Astami and Navami marked with 108 glowing pradips and 108 red lotus flowers.',
-    tags: ['Sandhi Puja', 'Maha Astami', '108 Diyas', 'Lotus'],
-    isCover: false
-  },
-  {
-    id: 'gal-12',
-    title: 'Subho Bijoya Immersion Procession',
-    category: 'Bisarjan',
-    year: 2025,
-    eventDate: 'Dashami Night',
-    imageUrl: '/images/sindhur-khela.jpg',
-    caption: 'Emotional farewell procession of Maa Durga with beating dhaks and chants of "Aschhe bochhor abar hobe!"',
-    tags: ['Bisarjan', 'Dashami', 'Farewell', 'Procession'],
-    isCover: false
   }
 ];
 

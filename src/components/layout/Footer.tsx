@@ -23,13 +23,22 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 pb-10 border-b border-[#25080C]">
           {/* Brand Info (5 cols on lg) */}
           <div className="lg:col-span-5 space-y-3.5">
-            <div>
-              <h3 className="font-serif-clean font-bold text-lg text-white tracking-tight">
-                Netaji Subhas Chandra Welfare Sangha
-              </h3>
-              <p className="text-xs font-semibold tracking-wider text-[#DFC798] uppercase mt-0.5">
-                ESTD. 2007 • Kurar Village, Malad East
-              </p>
+            <div className="flex items-center gap-3.5">
+              <div className="w-12 h-12 rounded-full overflow-hidden border border-[#DFC798]/60 shadow-md bg-[#7A121D] shrink-0">
+                <img
+                  src="/images/nsc-logo.jpg"
+                  alt="Netaji Subhas Chandra Welfare Sangha Official Logo"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h3 className="font-serif-clean font-bold text-lg text-white tracking-tight">
+                  Netaji Subhas Chandra Welfare Sangha
+                </h3>
+                <p className="text-xs font-semibold tracking-wider text-[#DFC798] uppercase mt-0.5">
+                  ESTD. 2007 • Kurar Village, Malad East
+                </p>
+              </div>
             </div>
 
             <p className="text-xs text-[#9E938B] leading-relaxed max-w-md">
@@ -95,7 +104,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 {[
                   { name: 'About Us', route: '/about' },
                   { name: 'Our Journey', route: '/history' },
-                  { name: 'Community', route: '/community' },
                   { name: 'Committee', route: '/committee' },
                   { name: 'Contact Us', route: '/contact' },
                 ].map(item => (

@@ -71,7 +71,7 @@ function AppContent() {
       case '/gallery':
         return <GalleryPage />;
       case '/community':
-        return <CommunityPage onNavigate={navigateTo} />;
+        return <HomePage onNavigate={navigateTo} />;
       case '/committee':
         return <CommitteePage onNavigate={navigateTo} />;
       case '/history':

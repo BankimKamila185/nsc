@@ -132,8 +132,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
         <div className="lg:col-span-5 relative">
           <div className="relative rounded-3xl overflow-hidden border border-[#E8E2D8] shadow-[0_20px_50px_rgba(0,0,0,0.1)] bg-neutral-950 group aspect-[4/5]">
             <img
-              src="/images/durga-pratima-about.jpg"
-              alt="Netaji Subhas Chandra Welfare Sangha Pratima"
+              src="/images/traditional-daaker-saaj-pratima.jpg"
+              alt="Netaji Subhas Chandra Welfare Sangha Traditional Daaker Saaj Pratima"
               loading="lazy"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out brightness-[0.95]"
             />
@@ -152,7 +152,11 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
 
           {/* Floating Pill Accent */}
           <div className="hidden sm:flex absolute -top-4 -right-4 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl border border-[#E8E2D8] shadow-lg items-center gap-2.5">
-            <span className="text-xl">🌺</span>
+            <img
+              src="/images/nsc-logo.jpg"
+              alt="NSC Welfare Sangha Logo"
+              className="w-7 h-7 rounded-full object-cover border border-[#DFC798]/60 shadow-xs"
+            />
             <div>
               <p className="text-[10px] font-bold text-[#7A121D] uppercase tracking-wider leading-tight">Landmark Year</p>
               <p className="text-xs font-bold text-[#1C1917]">20th Durga Puja (2026)</p>
@@ -226,8 +230,9 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* 5. Words from Our Leadership */}
-      {committee.length > 0 && (
+      {/* 5. Words from Our Leadership (Hidden for now as requested) */}
+      {/* Messages from Leadership section hidden for now */}
+      {false && committee.length > 0 && (
         <section className="p-8 sm:p-12 bg-white rounded-3xl border border-[#E8E2D8] shadow-xs space-y-8">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#E8E2D8]">
             <div className="space-y-1">

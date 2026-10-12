@@ -15,7 +15,6 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
     { label: 'About', route: '/about' },
     { label: 'Schedule', route: '/schedule' },
     { label: 'Gallery', route: '/gallery' },
-    { label: 'Community', route: '/community' },
     { label: 'Location', route: '/location' },
     { label: 'Contact', route: '/contact' },
   ];
@@ -32,10 +31,14 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
         {/* Logo */}
         <div
           onClick={() => handleNav('/')}
-          className="flex items-center gap-2.5 cursor-pointer group select-none shrink-0"
+          className="flex items-center gap-2.5 sm:gap-3 cursor-pointer group select-none shrink-0"
         >
-          <div className="w-8 h-8 rounded-full bg-[#7A121D] flex items-center justify-center text-[#DFC798] shadow-sm group-hover:scale-105 transition-transform">
-            <LotusDecoration size={16} color="#DFC798" />
+          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden border border-[#DFC798]/70 shadow-sm group-hover:scale-105 transition-transform shrink-0 bg-[#7A121D]">
+            <img
+              src="/images/nsc-logo.jpg"
+              alt="Netaji Subhas Chandra Welfare Sangha Official Logo"
+              className="w-full h-full object-cover"
+            />
           </div>
           <div className="flex flex-col">
             <span className="font-bold text-xs sm:text-sm tracking-tight text-neutral-900 group-hover:text-[#7A121D] transition-colors leading-none">

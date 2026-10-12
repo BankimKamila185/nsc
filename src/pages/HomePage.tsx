@@ -86,7 +86,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           <div className="lg:col-span-5">
             <div className="rounded-[2rem] overflow-hidden border border-neutral-200/70 shadow-[0_20px_50px_rgba(0,0,0,0.08)] aspect-[4/5] sm:aspect-[5/6] bg-neutral-900 group">
               <img
-                src="/images/durga-pratima-about.jpg"
+                src="/images/traditional-daaker-saaj-pratima.jpg"
                 alt="Netaji Subhas Chandra Welfare Sangha Traditional Daaker Saaj Durga Pratima"
                 loading="lazy"
                 decoding="async"
@@ -134,20 +134,16 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           subtitle="Glimpses of sacred rituals, Sindhur Khela, community prasad, and joyous cultural evenings."
         />
 
-        {/* Pure Image Masonry Waterfall with Varied Pinterest Heights */}
-        <div className="columns-2 sm:columns-3 lg:columns-4 gap-3.5 sm:gap-4 [column-fill:_balance]">
+        {/* Pure Image Masonry Waterfall or Grid */}
+        <div className={
+          gallery.length <= 4
+            ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto"
+            : "columns-2 sm:columns-3 lg:columns-4 gap-3.5 sm:gap-4 [column-fill:_balance]"
+        }>
           {gallery.slice(0, 8).map((photo, index) => {
-            const aspectRatios = [
-              'aspect-[3/4]',
-              'aspect-[2/3]',
-              'aspect-[4/3]',
-              'aspect-[9/14]',
-              'aspect-square',
-              'aspect-[3/5]',
-              'aspect-[4/5]',
-              'aspect-[3/4]'
-            ];
-            const aspectClass = aspectRatios[index % aspectRatios.length];
+            const aspectClass = gallery.length <= 4
+              ? 'aspect-[3/4] sm:aspect-[4/5]'
+              : ['aspect-[3/4]', 'aspect-[2/3]', 'aspect-[4/5]', 'aspect-[9/14]', 'aspect-square', 'aspect-[3/5]'][index % 6];
 
             return (
               <div
@@ -156,7 +152,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                   onNavigate('/gallery');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="break-inside-avoid mb-3.5 sm:mb-4 group cursor-pointer"
+                className={`group cursor-pointer ${gallery.length > 4 ? 'break-inside-avoid mb-3.5 sm:mb-4' : 'flex flex-col'}`}
               >
                 {/* Pure Image Card Container with Staggered Aspect Ratio */}
                 <div className={`relative rounded-2xl sm:rounded-3xl overflow-hidden bg-[#E9E9E9] shadow-xs hover:shadow-xl transition-all duration-300 select-none ${aspectClass}`}>
@@ -170,10 +166,21 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                   {/* Hover Save Pill */}
                   <div className="absolute top-2.5 right-2.5 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10">
                     <span className="px-3.5 py-1.5 rounded-full bg-[#E60023] hover:bg-[#AD081B] text-white font-bold text-xs shadow-md">
-                      Save
+                      View
                     </span>
                   </div>
                 </div>
+
+                {gallery.length <= 4 && (
+                  <div className="mt-3 px-1 text-center sm:text-left">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#7A121D] bg-[#F6F4EE] px-2.5 py-0.5 rounded-full border border-[#E8E2D8] inline-block mb-1">
+                      {photo.category}
+                    </span>
+                    <h3 className="font-serif-clean font-bold text-sm sm:text-base text-[#1C1917] group-hover:text-[#7A121D] transition-colors line-clamp-1">
+                      {photo.title}
+                    </h3>
+                  </div>
+                )}
               </div>
             );
           })}

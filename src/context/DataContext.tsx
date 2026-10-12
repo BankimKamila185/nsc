@@ -74,7 +74,7 @@ const STORAGE_KEYS = {
   SETTINGS: 'nscws_settings_v1',
   SCHEDULE: 'nscws_schedule_v1',
   EVENTS: 'nscws_events_v1',
-  GALLERY: 'nscws_gallery_v2',
+  GALLERY: 'nscws_gallery_v4',
   COMMITTEE: 'nscws_committee_v3',
   ANNOUNCEMENTS: 'nscws_announcements_v1',
   HISTORY: 'nscws_history_v1',

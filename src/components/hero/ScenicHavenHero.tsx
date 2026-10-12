@@ -44,6 +44,18 @@ export const ScenicHavenHero: React.FC<ScenicHavenHeroProps> = ({ siteSettings, 
 
       {/* Hero Content Container */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 text-center flex flex-col items-center animate-fade-in-up">
+        {/* Official Sangha Crest Badge */}
+        <div className="mb-5 inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-black/45 backdrop-blur-md border border-[#DFC798]/35 shadow-xl hover:border-[#DFC798]/60 transition-colors">
+          <img
+            src="/images/nsc-logo.jpg"
+            alt="NSC Welfare Sangha Logo"
+            className="w-6 h-6 rounded-full object-cover border border-[#DFC798]/60"
+          />
+          <span className="text-[11px] font-semibold tracking-wider text-[#DFC798] uppercase">
+            Netaji Subhas Chandra Welfare Sangha
+          </span>
+        </div>
+
         {/* Main Title */}
         <h1 className="font-sans font-bold text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white tracking-tight leading-[1.08] drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)] max-w-4xl">
           20th Sarbojanin Durga Puja 2026

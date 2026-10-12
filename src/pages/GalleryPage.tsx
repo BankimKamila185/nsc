@@ -19,7 +19,6 @@ export const GalleryPage: React.FC = () => {
     'Sindhur Khela',
     'Bisarjan',
     'Lakshmi Puja',
-    'Community Activities',
     'Cultural Programs'
   ];
 
@@ -92,7 +91,7 @@ export const GalleryPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Pure Image Pinterest Masonry Waterfall */}
+      {/* Pure Image Pinterest Masonry Waterfall or Grid */}
       {filteredPhotos.length === 0 ? (
         <div className="p-16 text-center bg-white rounded-3xl border border-[#E8E2D8] text-[#57534E]">
           <ImageIcon size={44} className="mx-auto text-[#8C827A] mb-3 opacity-50" />
@@ -100,32 +99,24 @@ export const GalleryPage: React.FC = () => {
           <p className="text-xs text-[#8C827A] mt-1">Try selecting another category or clearing the search box.</p>
         </div>
       ) : (
-        <div className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 xl:columns-6 gap-3.5 sm:gap-4 [column-fill:_balance]">
+        <div className={
+          filteredPhotos.length <= 4
+            ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto"
+            : "columns-2 sm:columns-3 md:columns-4 lg:columns-5 xl:columns-6 gap-3.5 sm:gap-4 [column-fill:_balance]"
+        }>
           {filteredPhotos.map((photo, index) => {
             const isSaved = savedIds.has(photo.id);
-            const aspectRatios = [
-              'aspect-[3/4]',
-              'aspect-[2/3]',
-              'aspect-[4/3]',
-              'aspect-[9/14]',
-              'aspect-square',
-              'aspect-[3/5]',
-              'aspect-[4/5]',
-              'aspect-[3/4]',
-              'aspect-[2/3]',
-              'aspect-[4/3]',
-              'aspect-[9/14]',
-              'aspect-square'
-            ];
-            const aspectClass = aspectRatios[index % aspectRatios.length];
+            const aspectClass = filteredPhotos.length <= 4
+              ? 'aspect-[3/4] sm:aspect-[4/5]'
+              : ['aspect-[3/4]', 'aspect-[2/3]', 'aspect-[4/5]', 'aspect-[9/14]', 'aspect-square', 'aspect-[3/5]'][index % 6];
 
             return (
               <div
                 key={photo.id}
                 onClick={() => setLightboxIndex(index)}
-                className="break-inside-avoid mb-3.5 sm:mb-4 group cursor-pointer"
+                className={`group cursor-pointer ${filteredPhotos.length > 4 ? 'break-inside-avoid mb-3.5 sm:mb-4' : 'flex flex-col'}`}
               >
-                {/* Pure Image Card with Staggered Aspect Ratio */}
+                {/* Pure Image Card */}
                 <div className={`relative rounded-2xl sm:rounded-3xl overflow-hidden bg-[#E9E9E9] shadow-xs hover:shadow-xl transition-all duration-300 select-none ${aspectClass}`}>
                   <img
                     src={photo.imageUrl}
@@ -135,7 +126,7 @@ export const GalleryPage: React.FC = () => {
                   />
 
                   {/* Pinterest Hover Overlay: Save Button and Share */}
-                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex flex-col justify-between p-3">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex flex-col justify-between p-3.5 sm:p-4">
                     <div className="flex justify-end">
                       <button
                         onClick={e => toggleSave(e, photo.id)}
@@ -149,7 +140,13 @@ export const GalleryPage: React.FC = () => {
                       </button>
                     </div>
 
-                    <div className="flex justify-end">
+                    <div className="flex items-end justify-between gap-2">
+                      <div className="text-white drop-shadow-md min-w-0">
+                        <span className="text-[10px] uppercase font-bold tracking-wider bg-white/20 backdrop-blur-sm px-2 py-0.5 rounded-full inline-block mb-1">
+                          {photo.category}
+                        </span>
+                        <p className="text-xs font-semibold truncate">{photo.title}</p>
+                      </div>
                       <button
                         onClick={e => {
                           e.stopPropagation();
@@ -157,7 +154,7 @@ export const GalleryPage: React.FC = () => {
                             navigator.share({ title: photo.title, url: window.location.href });
                           }
                         }}
-                        className="w-8 h-8 rounded-full bg-white/90 hover:bg-white text-neutral-900 flex items-center justify-center shadow-md hover:scale-105 transition-all cursor-pointer"
+                        className="w-8 h-8 shrink-0 rounded-full bg-white/90 hover:bg-white text-neutral-900 flex items-center justify-center shadow-md hover:scale-105 transition-all cursor-pointer"
                         title="Share"
                       >
                         <Share2 size={13} />
@@ -165,6 +162,24 @@ export const GalleryPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
+
+                {/* Subtitle / Caption under image for clean gallery view */}
+                {filteredPhotos.length <= 4 && (
+                  <div className="mt-3 px-1">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-[#7A121D] bg-[#F6F4EE] px-2.5 py-0.5 rounded-full border border-[#E8E2D8]">
+                        {photo.category}
+                      </span>
+                      <span className="text-xs text-[#8C827A]">• {photo.year}</span>
+                    </div>
+                    <h3 className="font-serif-clean font-bold text-sm sm:text-base text-[#1C1917] group-hover:text-[#7A121D] transition-colors line-clamp-1">
+                      {photo.title}
+                    </h3>
+                    <p className="text-xs text-[#57534E] mt-1 line-clamp-2 leading-relaxed">
+                      {photo.caption}
+                    </p>
+                  </div>
+                )}
               </div>
             );
           })}
