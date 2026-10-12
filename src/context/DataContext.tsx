@@ -71,7 +71,7 @@ interface DataContextType {
 const DataContext = createContext<DataContextType | undefined>(undefined);
 
 const STORAGE_KEYS = {
-  SETTINGS: 'nscws_settings_v1',
+  SETTINGS: 'nscws_settings_v2',
   SCHEDULE: 'nscws_schedule_v1',
   EVENTS: 'nscws_events_v1',
   GALLERY: 'nscws_gallery_v4',
@@ -79,7 +79,7 @@ const STORAGE_KEYS = {
   ANNOUNCEMENTS: 'nscws_announcements_v1',
   HISTORY: 'nscws_history_v1',
   PILLARS: 'nscws_pillars_v1',
-  SOCIALS: 'nscws_socials_v1',
+  SOCIALS: 'nscws_socials_v2',
   MESSAGES: 'nscws_messages_v1',
 };
 

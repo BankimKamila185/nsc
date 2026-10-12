@@ -58,7 +58,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 <span>Instagram</span>
               </a>
               <a
-                href="https://facebook.com/NetajiSubhasChandraWelfareSangha"
+                href="https://www.facebook.com/share/19chm2MKaR/"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#22070A] hover:bg-[#340B10] text-[#D8C7B8] hover:text-white text-xs border border-[#3D0F15] transition-all"

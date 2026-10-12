@@ -26,7 +26,7 @@ export const initialSiteSettings: SiteSettings = {
   instagramHandle: '@nscwelfare.sangha',
   instagramUrl: 'https://instagram.com/nscwelfare.sangha',
   facebookName: 'Netaji Subhas Chandra Welfare Sangha',
-  facebookUrl: 'https://facebook.com/NetajiSubhasChandraWelfareSangha',
+  facebookUrl: 'https://www.facebook.com/share/19chm2MKaR/',
   announcementTicker: '🌸 20th Durga Puja 2026 Celebration at Kurar Village, Malad East • Maha Astami Pushpanjali: 9:00 AM – 12:00 PM • Maha Bhandara: Maha Navami 8:00 PM • All devotees and families are cordially invited!'
 };
 
@@ -542,7 +542,7 @@ export const initialSocialLinks: SocialLink[] = [
   {
     platform: 'Facebook',
     handle: 'Netaji Subhas Chandra Welfare Sangha',
-    url: 'https://facebook.com/NetajiSubhasChandraWelfareSangha',
+    url: 'https://www.facebook.com/share/19chm2MKaR/',
     note: 'Join our community group for event updates & family memories'
   }
 ];
