@@ -37,23 +37,82 @@ function AppContent() {
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
-  // Dynamic document title update based on current page
+  // Dynamic SEO metadata updates per page route
   useEffect(() => {
-    const titles: Record<string, string> = {
-      '/': 'Home | Netaji Subhas Chandra Welfare Sangha - 20th Durga Puja 2026',
-      '/about': 'About Us | Netaji Subhas Chandra Welfare Sangha',
-      '/durga-puja': '20th Durga Puja 2026 | Netaji Subhas Chandra Welfare Sangha',
-      '/schedule': 'Puja Schedule & Timetable 2026 | Netaji Subhas Chandra Welfare Sangha',
-      '/gallery': 'Photo Gallery | Netaji Subhas Chandra Welfare Sangha',
-      '/community': 'Community & Welfare | Netaji Subhas Chandra Welfare Sangha',
-      '/committee': 'Executive Committee | Netaji Subhas Chandra Welfare Sangha',
-      '/history': 'Our Journey (2007–2026) | Netaji Subhas Chandra Welfare Sangha',
-      '/events': 'Events & Celebrations | Netaji Subhas Chandra Welfare Sangha',
-      '/lakshmi-puja': 'Kojagari Lakshmi Puja 2026 | Netaji Subhas Chandra Welfare Sangha',
-      '/location': 'Location & How to Reach | Netaji Subhas Chandra Welfare Sangha',
-      '/contact': 'Contact Us | Netaji Subhas Chandra Welfare Sangha',
+    const seoData: Record<string, { title: string; desc: string }> = {
+      '/': {
+        title: 'Netaji Subhas Chandra Welfare Sangha | 20th Durga Puja 2026',
+        desc: 'Official website of Netaji Subhas Chandra Welfare Sangha (ESTD. 2007), Kurar Village, Malad East, Mumbai. Celebrate the landmark 20th Sarbojanin Durga Puja 2026, Kojagari Lakshmi Puja, authentic Daaker Saaj darshan, and Vedic rituals.'
+      },
+      '/durga-puja': {
+        title: '20th Sarbojanin Durga Puja 2026 | Netaji Subhas Chandra Welfare Sangha',
+        desc: 'Shree Shree Sarbajanin Durga Puja 2026 in Kurar Village, Malad East, Mumbai. Seven days of Vedic rituals, Pushpanjali, Sandhi Puja 108 lamps, and Maha Bhandara prasad.'
+      },
+      '/schedule': {
+        title: 'Puja Schedule & Official Timetable 2026 | Netaji Subhas Chandra Welfare Sangha',
+        desc: 'Complete day-by-day 2026 Puja timetable from Maha Panchami to Lakshmi Puja. Official ritual timings, Pushpanjali, Sandhi Puja, and Bhog distribution in Malad East.'
+      },
+      '/about': {
+        title: 'About Our Sangha & 20-Year Heritage | Netaji Subhas Chandra Welfare Sangha',
+        desc: 'The 20-year story of Netaji Subhas Chandra Welfare Sangha since 2007. Preserving Vedic rituals, authentic Bengali Daaker Saaj craftsmanship, and community seva in Kurar Village.'
+      },
+      '/gallery': {
+        title: 'Durga Puja Photo Gallery & Celebrations | Netaji Subhas Chandra Welfare Sangha',
+        desc: 'Photo gallery of sacred Durga Puja moments, authentic Daaker Saaj pratima, illuminated mandap, and joyous celebrations at Netaji Subhas Chandra Welfare Sangha.'
+      },
+      '/committee': {
+        title: 'Executive Committee & Leadership | Netaji Subhas Chandra Welfare Sangha',
+        desc: 'Executive Committee and leadership of Netaji Subhas Chandra Welfare Sangha guiding the 20th Sarbojanin Durga Puja 2026 in Kurar Village, Malad East.'
+      },
+      '/history': {
+        title: 'Our 20-Year Journey (2007–2026) | Netaji Subhas Chandra Welfare Sangha',
+        desc: '20-year historical chronicle (2007–2026) of Netaji Subhas Chandra Welfare Sangha from modest neighborhood beginnings to a landmark Mumbai cultural institution.'
+      },
+      '/events': {
+        title: 'Festival Events & Cultural Programs | Netaji Subhas Chandra Welfare Sangha',
+        desc: 'Cultural evenings, Anandamela, Dhunuchi Naach competition, and community celebrations organized by Netaji Subhas Chandra Welfare Sangha.'
+      },
+      '/lakshmi-puja': {
+        title: 'Kojagari Lakshmi Puja Celebrations 2026 | Netaji Subhas Chandra Welfare Sangha',
+        desc: 'Kojagari Lakshmi Puja celebrations at Netaji Subhas Chandra Welfare Sangha with midnight Vedic prayers, sacred alpona artwork, and prasad.'
+      },
+      '/location': {
+        title: 'Location & How to Reach Mandap | Netaji Subhas Chandra Welfare Sangha',
+        desc: 'Address and directions to Anand Wadi Durga Puja Mandap, Kurar Village, Malad East, Mumbai. Easy access via Western Express Highway and Malad station.'
+      },
+      '/contact': {
+        title: 'Contact Us & General Inquiries | Netaji Subhas Chandra Welfare Sangha',
+        desc: 'Get in touch with Netaji Subhas Chandra Welfare Sangha for puja queries, pushpanjali timings, donations, and volunteer opportunities in Malad East.'
+      }
     };
-    document.title = titles[currentRoute] || 'Netaji Subhas Chandra Welfare Sangha | 20th Durga Puja 2026';
+
+    const currentSeo = seoData[currentRoute] || seoData['/'];
+    document.title = currentSeo.title;
+
+    // Update Meta Description
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+      metaDesc = document.createElement('meta');
+      metaDesc.setAttribute('name', 'description');
+      document.head.appendChild(metaDesc);
+    }
+    metaDesc.setAttribute('content', currentSeo.desc);
+
+    // Update Open Graph tags
+    let ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', currentSeo.title);
+
+    let ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute('content', currentSeo.desc);
+
+    // Update Canonical Link
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', `https://nsc-plum.vercel.app${currentRoute === '/' ? '' : currentRoute}`);
   }, [currentRoute]);
 
   const renderCurrentPage = () => {
