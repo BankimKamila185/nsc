@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Calendar, MapPin, Sparkles, ShieldCheck, ArrowUpRight } from 'lucide-react';
-import { LotusDecoration } from '../decorative/FestivalMotifs';
+import { Menu, X, Calendar, ArrowUpRight } from 'lucide-react';
 
 interface HeaderProps {
   currentRoute: string;
@@ -119,13 +118,6 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onNavigate }) => {
             >
               <Calendar size={13} />
               <span>Full 2026 Puja Timetable</span>
-            </button>
-            <button
-              onClick={() => handleNav('/admin')}
-              className="w-full py-1.5 text-neutral-500 hover:text-neutral-900 text-xs font-medium text-center cursor-pointer flex items-center justify-center gap-1"
-            >
-              <ShieldCheck size={13} />
-              <span>Admin Portal</span>
             </button>
           </div>
         </div>

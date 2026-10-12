@@ -16,7 +16,6 @@ import { EventsPage } from './pages/EventsPage';
 import { LakshmiPujaPage } from './pages/LakshmiPujaPage';
 import { LocationPage } from './pages/LocationPage';
 import { ContactPage } from './pages/ContactPage';
-import { AdminDashboardPage } from './pages/AdminDashboardPage';
 
 function AppContent() {
   const [currentRoute, setCurrentRoute] = useState<string>(() => {
@@ -53,7 +52,6 @@ function AppContent() {
       '/lakshmi-puja': 'Kojagari Lakshmi Puja 2026 | Netaji Subhas Chandra Welfare Sangha',
       '/location': 'Location & How to Reach | Netaji Subhas Chandra Welfare Sangha',
       '/contact': 'Contact Us | Netaji Subhas Chandra Welfare Sangha',
-      '/admin': 'Admin Portal | Netaji Subhas Chandra Welfare Sangha',
     };
     document.title = titles[currentRoute] || 'Netaji Subhas Chandra Welfare Sangha | 20th Durga Puja 2026';
   }, [currentRoute]);
@@ -85,7 +83,7 @@ function AppContent() {
       case '/contact':
         return <ContactPage />;
       case '/admin':
-        return <AdminDashboardPage />;
+        return <HomePage onNavigate={navigateTo} />;
       default:
         return <HomePage onNavigate={navigateTo} />;
     }

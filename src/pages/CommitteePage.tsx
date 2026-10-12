@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useData } from '../context/DataContext';
 import { SectionHeading } from '../components/decorative/SectionHeading';
-import { User, Shield, Phone, Mail, Edit3, Award, Quote } from 'lucide-react';
+import { User, Shield, Phone, Mail, Award, Quote } from 'lucide-react';
 
 interface CommitteePageProps {
   onNavigate: (route: string) => void;
@@ -51,17 +51,6 @@ export const CommitteePage: React.FC<CommitteePageProps> = ({ onNavigate }) => {
             );
           })}
         </div>
-
-        <button
-          onClick={() => {
-            onNavigate('/admin');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          className="text-xs font-semibold text-[#7A121D] hover:underline shrink-0 cursor-pointer flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#F6F4EE] border border-[#E8E2D8]"
-        >
-          <Edit3 size={13} />
-          <span>Manage Members in Admin</span>
-        </button>
       </div>
 
       {/* Leadership Cards Grid */}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, ArrowUp, ShieldCheck, ExternalLink } from 'lucide-react';
+import { MapPin, ArrowUp, ExternalLink } from 'lucide-react';
 import { InstagramIcon, FacebookIcon } from '../icons/SocialIcons';
 
 interface FooterProps {
@@ -144,29 +144,17 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
         </div>
 
-        {/* Bottom Bar: Copyright, Admin, & Back to Top */}
+        {/* Bottom Bar: Copyright & Back to Top */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#7D736C]">
           <p>© {new Date().getFullYear()} Netaji Subhas Chandra Welfare Sangha. All rights reserved.</p>
 
-          <div className="flex items-center gap-5">
-            <button
-              onClick={() => handleNav('/admin')}
-              className="hover:text-white transition-colors cursor-pointer flex items-center gap-1.5 text-[11px]"
-            >
-              <ShieldCheck size={13} />
-              <span>Admin Portal</span>
-            </button>
-
-            <span className="text-[#3A141A]">|</span>
-
-            <button
-              onClick={scrollToTop}
-              className="hover:text-white transition-colors cursor-pointer flex items-center gap-1 text-[11px] text-[#DFC798]"
-            >
-              <span>Back to top</span>
-              <ArrowUp size={12} />
-            </button>
-          </div>
+          <button
+            onClick={scrollToTop}
+            className="hover:text-white transition-colors cursor-pointer flex items-center gap-1 text-[11px] text-[#DFC798]"
+          >
+            <span>Back to top</span>
+            <ArrowUp size={12} />
+          </button>
         </div>
       </div>
     </footer>
