@@ -112,7 +112,7 @@ function AppContent() {
       canonical.setAttribute('rel', 'canonical');
       document.head.appendChild(canonical);
     }
-    canonical.setAttribute('href', `https://nsc-plum.vercel.app${currentRoute === '/' ? '' : currentRoute}`);
+    canonical.setAttribute('href', `https://nscwelfaresangha.vercel.app${currentRoute === '/' ? '' : currentRoute}`);
   }, [currentRoute]);
 
   const renderCurrentPage = () => {

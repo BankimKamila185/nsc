@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nsc-plum.vercel.app/sitemap.xml
+Sitemap: https://nscwelfaresangha.vercel.app/sitemap.xml
