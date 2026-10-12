@@ -105,6 +105,10 @@ function AppContent() {
     let ogDesc = document.querySelector('meta[property="og:description"]');
     if (ogDesc) ogDesc.setAttribute('content', currentSeo.desc);
 
+    // Update Open Graph URL
+    let ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute('content', `https://nscwelfaresangha.vercel.app${currentRoute === '/' ? '' : currentRoute}`);
+
     // Update Canonical Link
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {

@@ -2,6 +2,7 @@ import React from 'react';
 import { useData } from '../context/DataContext';
 import { ScenicHavenHero } from '../components/hero/ScenicHavenHero';
 import { SectionHeading } from '../components/decorative/SectionHeading';
+import { SeoFaqSection } from '../components/seo/SeoFaqSection';
 import { ArrowRight, Calendar, Image as ImageIcon, MapPin, Sparkles, Heart, Landmark, Utensils, Users, MoreHorizontal } from 'lucide-react';
 
 interface HomePageProps {
@@ -201,7 +202,12 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       </section>
 
       {/* ============================================================
-          7. CLEAN CONNECT SECTION
+          7. FAQ & VISITOR GUIDE (HIGH-RANKING SEO KNOWLEDGE BASE)
+          ============================================================ */}
+      <SeoFaqSection />
+
+      {/* ============================================================
+          8. CLEAN CONNECT SECTION
           ============================================================ */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <div className="clean-card p-8 sm:p-14 text-center bg-white border border-[#E8E2D8]">
