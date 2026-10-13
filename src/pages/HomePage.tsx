@@ -35,20 +35,20 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           <div className="lg:col-span-7 space-y-8">
             <div className="space-y-4">
               <span className="text-xs font-semibold tracking-[0.2em] text-[#7A121D] uppercase">
-                About Our Sangha • Estd. 2007
+                About NSCWS • Landmark Malad Durga Puja • Estd. 2007
               </span>
 
               <h2 className="font-sans font-bold text-4xl sm:text-5xl lg:text-6xl text-neutral-900 tracking-tight leading-[1.08]">
-                Two decades of devotion & community.
+                Two decades of devotion & Malad Durga Puja heritage.
               </h2>
             </div>
 
             <div className="space-y-4 text-base sm:text-lg text-neutral-600 leading-relaxed font-normal">
               <p>
-                Founded in 2007 at <span className="text-neutral-900 font-medium">Kurar Village, Malad East, Mumbai</span>, Netaji Subhas Chandra Welfare Sangha brings people together through authentic Sarbojanin Durga Puja, Lakshmi Puja, and rich cultural traditions.
+                Founded in 2007 at <span className="text-neutral-900 font-medium">Kurar Village, Malad East, Mumbai</span>, Netaji Subhas Chandra Welfare Sangha (<span className="text-neutral-900 font-medium">NSCWS</span>) organizes one of the most celebrated and authentic <span className="text-neutral-900 font-medium">Malad Durga Puja</span> festivities in the Western Suburbs, bringing thousands of families together through Vedic sanctity, pure Daaker Saaj darshan, and community seva.
               </p>
               <p>
-                From grand Maha Prasad distributions to philanthropic initiatives, we create an inclusive sanctuary where heritage is honored, families unite, and lifelong bonds flourish.
+                From free daily Maha Bhandara prasad distributions to philanthropic initiatives, NSCWS creates an inclusive cultural sanctuary where heritage is honored, families unite, and lifelong bonds flourish.
               </p>
             </div>
 

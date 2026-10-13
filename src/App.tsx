@@ -41,48 +41,48 @@ function AppContent() {
   useEffect(() => {
     const seoData: Record<string, { title: string; desc: string }> = {
       '/': {
-        title: 'Netaji Subhas Chandra Welfare Sangha | 20th Durga Puja 2026',
-        desc: 'Official website of Netaji Subhas Chandra Welfare Sangha (ESTD. 2007), Kurar Village, Malad East, Mumbai. Celebrate the landmark 20th Sarbojanin Durga Puja 2026, Kojagari Lakshmi Puja, authentic Daaker Saaj darshan, and Vedic rituals.'
+        title: 'Netaji Subhas Chandra Welfare Sangha (NSCWS) | Malad Durga Puja 2026',
+        desc: 'Official website of Netaji Subhas Chandra Welfare Sangha (NSCWS), celebrating the landmark 20th Malad Durga Puja 2026 in Kurar Village, Malad East, Mumbai. Authentic Daaker Saaj darshan, Vedic rituals, Pushpanjali timetable & prasad.'
       },
       '/durga-puja': {
-        title: '20th Sarbojanin Durga Puja 2026 | Netaji Subhas Chandra Welfare Sangha',
-        desc: 'Shree Shree Sarbajanin Durga Puja 2026 in Kurar Village, Malad East, Mumbai. Seven days of Vedic rituals, Pushpanjali, Sandhi Puja 108 lamps, and Maha Bhandara prasad.'
+        title: '20th Malad Durga Puja 2026 | NSCWS Netaji Subhas Chandra Welfare Sangha',
+        desc: 'Shree Shree Sarbajanin Malad Durga Puja 2026 by NSCWS in Kurar Village, Malad East, Mumbai. Seven days of Vedic rituals, Pushpanjali, Sandhi Puja 108 lamps, and Maha Bhandara prasad.'
       },
       '/schedule': {
-        title: 'Puja Schedule & Official Timetable 2026 | Netaji Subhas Chandra Welfare Sangha',
-        desc: 'Complete day-by-day 2026 Puja timetable from Maha Panchami to Lakshmi Puja. Official ritual timings, Pushpanjali, Sandhi Puja, and Bhog distribution in Malad East.'
+        title: 'Malad Durga Puja 2026 Timetable & Pushpanjali Schedule | NSCWS',
+        desc: 'Complete day-by-day 2026 Malad Durga Puja timetable from Maha Panchami to Lakshmi Puja. Official ritual timings, Pushpanjali, Sandhi Puja, and Bhog distribution in Malad East by NSCWS.'
       },
       '/about': {
-        title: 'About Our Sangha & 20-Year Heritage | Netaji Subhas Chandra Welfare Sangha',
-        desc: 'The 20-year story of Netaji Subhas Chandra Welfare Sangha since 2007. Preserving Vedic rituals, authentic Bengali Daaker Saaj craftsmanship, and community seva in Kurar Village.'
+        title: 'About NSCWS & Malad Durga Puja Heritage (Estd. 2007) | Mumbai',
+        desc: 'The 20-year story of NSCWS (Netaji Subhas Chandra Welfare Sangha) since 2007. Preserving Vedic rituals, authentic Bengali Daaker Saaj craftsmanship, and Malad Durga Puja community seva.'
       },
       '/gallery': {
-        title: 'Durga Puja Photo Gallery & Celebrations | Netaji Subhas Chandra Welfare Sangha',
-        desc: 'Photo gallery of sacred Durga Puja moments, authentic Daaker Saaj pratima, illuminated mandap, and joyous celebrations at Netaji Subhas Chandra Welfare Sangha.'
+        title: 'Malad Durga Puja Photo Gallery & Pratima Darshan | NSCWS',
+        desc: 'Photo gallery of sacred Malad Durga Puja moments, authentic Daaker Saaj pratima, illuminated mandap, and celebrations at NSCWS Kurar Village, Malad East.'
       },
       '/committee': {
-        title: 'Executive Committee & Leadership | Netaji Subhas Chandra Welfare Sangha',
-        desc: 'Executive Committee and leadership of Netaji Subhas Chandra Welfare Sangha guiding the 20th Sarbojanin Durga Puja 2026 in Kurar Village, Malad East.'
+        title: 'Executive Committee & Leadership | NSCWS Malad Durga Puja',
+        desc: 'Executive Committee and leadership of Netaji Subhas Chandra Welfare Sangha (NSCWS) guiding the 20th Sarbojanin Malad Durga Puja 2026 in Kurar Village, Malad East.'
       },
       '/history': {
-        title: 'Our 20-Year Journey (2007–2026) | Netaji Subhas Chandra Welfare Sangha',
-        desc: '20-year historical chronicle (2007–2026) of Netaji Subhas Chandra Welfare Sangha from modest neighborhood beginnings to a landmark Mumbai cultural institution.'
+        title: 'Our 20-Year Journey (2007–2026) | NSCWS Malad Durga Puja',
+        desc: '20-year historical chronicle (2007–2026) of NSCWS from modest neighborhood beginnings to a landmark Malad Durga Puja and cultural institution in Mumbai.'
       },
       '/events': {
-        title: 'Festival Events & Cultural Programs | Netaji Subhas Chandra Welfare Sangha',
-        desc: 'Cultural evenings, Anandamela, Dhunuchi Naach competition, and community celebrations organized by Netaji Subhas Chandra Welfare Sangha.'
+        title: 'Festival Events & Cultural Programs | NSCWS Malad Durga Puja',
+        desc: 'Cultural evenings, Anandamela, Dhunuchi Naach competition, and community celebrations organized by NSCWS at Malad Durga Puja.'
       },
       '/lakshmi-puja': {
-        title: 'Kojagari Lakshmi Puja Celebrations 2026 | Netaji Subhas Chandra Welfare Sangha',
-        desc: 'Kojagari Lakshmi Puja celebrations at Netaji Subhas Chandra Welfare Sangha with midnight Vedic prayers, sacred alpona artwork, and prasad.'
+        title: 'Kojagari Lakshmi Puja Celebrations 2026 | NSCWS Malad',
+        desc: 'Kojagari Lakshmi Puja celebrations at NSCWS Malad Durga Puja with midnight Vedic prayers, sacred alpona artwork, and prasad distribution.'
       },
       '/location': {
-        title: 'Location & How to Reach Mandap | Netaji Subhas Chandra Welfare Sangha',
-        desc: 'Address and directions to Anand Wadi Durga Puja Mandap, Kurar Village, Malad East, Mumbai. Easy access via Western Express Highway and Malad station.'
+        title: 'Malad Durga Puja Location & Directions to Mandap | NSCWS',
+        desc: 'Address and directions to NSCWS Anand Wadi Malad Durga Puja Mandap, Kurar Village, Malad East, Mumbai. Easy access via Western Express Highway and Malad station.'
       },
       '/contact': {
-        title: 'Contact Us & General Inquiries | Netaji Subhas Chandra Welfare Sangha',
-        desc: 'Get in touch with Netaji Subhas Chandra Welfare Sangha for puja queries, pushpanjali timings, donations, and volunteer opportunities in Malad East.'
+        title: 'Contact Us & General Inquiries | NSCWS Malad Durga Puja',
+        desc: 'Get in touch with NSCWS (Netaji Subhas Chandra Welfare Sangha) for Malad Durga Puja queries, pushpanjali timings, donations, and volunteer opportunities in Malad East.'
       }
     };
 
